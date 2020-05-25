@@ -1,0 +1,1239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #AA0601;
+  padding: 30px 88px;
+}
+
+.hamBtn {
+  display: none;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 512px;
+}
+
+.navItem {
+  padding: 10px 0;
+}
+
+.menu {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 30px 48px;
+  }
+  
+  .nav {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    position: relative;
+    padding: 10px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 30px;
+  }
+  
+  .hamBtn {
+    display: block;
+    position: absolute;
+    left: 13px;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.8s;
+    z-index: 120;
+  }
+  
+  .nav.active {
+    max-height: 240px;
+  }
+  
+  .navItem {
+    display: block;
+    background-color: #AA0601;
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding: 16px 0;
+  }
+  
+  .navItem:hover {
+    background-color: #8f0400;
+  }
+}
+
+/* banner */
+
+.banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png);
+  height: 840px;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.banner .container {
+  margin-right: 13%;
+}
+
+.slogan {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 96px;
+  color: #650300;
+  text-align: right;
+}
+
+.sloganText {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  color: #650300;
+  text-align: right;
+}
+
+@media (max-width:992px) {
+  .banner .container {
+    margin-right: 48px;
+  }
+  
+  .slogan {
+    font-size: 48px;
+    line-height: 72px;
+  }
+  
+  .sloganText {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .banner {
+    background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true");
+    height: 394px;
+  }
+  
+  .banner .container {
+    margin-right: 12px;
+  }
+  
+  .slogan {
+    font-size: 32px;
+  }
+  
+  .sloganText {
+    font-size: 16px;
+  }
+}
+
+/* pro-heart */
+.proHeart {
+  background-color: #AA06010D;
+}
+
+.proHeart .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: bold;
+  color: #650300;
+}
+
+.proHeart .sectionTitle {
+  margin-bottom: 44px;
+}
+
+.featureCards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.featureItem {
+  text-align: center;
+  width: 282px;
+}
+
+.featureIcon {
+  margin-bottom: 40px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  /* transition: 0.8s; */
+}
+
+/* .featureIcon:hover {
+  transform: rotate(360deg);
+} */
+
+.featureTitle {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #650300;
+}
+
+.featureText {
+  text-align: left;
+  padding: 0 37px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 992px) {
+  .proHeart .container {
+    max-width: 672px;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 12px;
+  }
+  
+  .featureCards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .featureItem {
+    max-width: 324px;
+    margin-bottom: 12px;
+  }
+  
+  .featureItem:nth-child(1) {
+    order: 3;
+  }
+  
+  .featureItem:nth-child(4) {
+    order: 4;
+  }
+  
+  .featureIcon {
+    margin-top: 20px;
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .proHeart .container {
+    max-width: 327px;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+}
+
+/* classic */
+
+.classic .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.classic {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.margin-b {
+  margin-bottom: 32px;
+}
+
+.series {
+  text-decoration: none;
+}
+
+.sectionTitle {
+  margin-bottom: 60px;
+  font-size: 48px;
+  line-height: 72px;
+  color: #650300;
+  font-weight: 700;
+  text-align: center;
+}
+
+.optical, .functional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunglass {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.classicImg {
+  width: 792px;
+  height: 320px;
+  background-size: cover;
+}
+
+.opticalImg {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-1.png);
+  margin-right: 24px;
+}
+
+.sunglassImg {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2.png);
+  margin-left: 24px;
+  transition: all 0.3s;
+}
+
+.sunglassImg:hover {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png);
+}
+
+.functionalImg {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-3.png);
+  margin-right: 24px;
+}
+
+.classicName{
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 900;
+  font-style: italic;
+  color: #AA0601;
+}
+
+.opticalIcon::before {
+  content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg);
+  margin-right: 8px;
+}
+
+.sunglassIcon::before {
+  content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun.svg);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.functionalIcon::before {
+  content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-thunder.svg);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width:992px) {
+  .classic .container {
+    max-width: 672px;
+  }
+  
+  .classic {
+    padding: 40px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .margin-b {
+    margin-bottom: 8px;
+  }
+  
+  .classicImg {
+    width: 411px;
+    height: 168px;
+  }
+  
+  .optical, .functional {
+    justify-content: flex-start;
+  }
+  
+  .sunglass {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .sunglassImg {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+  
+  .classicName {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  
+  .seriesName {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .classic .container {
+    max-width: 329px;
+  }
+  
+  .classic {
+    padding: 24px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .classicImg {
+    display: none;
+  }
+  
+  .optical {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-1.png);
+  }
+  
+  .sunglass {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2.png);
+  }
+  
+  .functional {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-3.png);
+  }
+  
+  .img-s {
+    height: 134px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .optical, .sunglass, .functional {
+    justify-content: center;
+  }
+  
+  .seriesName {
+    width: 100%;
+  }
+  
+  .classicName {
+    color: #fff;
+  }
+  
+  .opticalIcon::before {
+    content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond-white.svg);
+  }
+  
+  .sunglassIcon::before {
+    content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun-white.svg);
+  }
+  
+  .functionalIcon::before {
+    content: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-thunder-white.svg);
+  }
+}
+
+/* glasses */
+.glasses {
+  padding-top: 64px;
+  padding-bottom: 479px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.crossover {
+  max-width: 1540px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.glassBlock-left {
+  margin-right: 8px;
+}
+
+.rightGlass-up {
+  margin-bottom: 8px;
+}
+
+.rightGlass-down {
+  display: flex;
+}
+
+.downGlass-left {
+  margin-right: 8px;
+}
+
+.downGlass-rightUp {
+  margin-bottom: 8px;
+}
+
+.downGlass-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.moreBtn-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    max-width: 30%;
+    transition: all .65s .3s;
+    transform: translateX(0px);
+    margin-right: 85px;
+    cursor: pointer;
+}
+
+.moreBtn-wrap::after {
+    content: "";
+    position: absolute;
+    background: white;
+    top: 8%;
+    bottom: 8%;
+    left: 10%;
+    right: -85px;
+}
+
+.moreBtnText {
+  padding: 5px 0 5px 32px;
+  font-size: 72px;
+  color: #AA0601;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.moreBtnText::before {
+  content: "MORE";
+  position: absolute;
+  color: #AA0601;
+  transition: all .65s .3s;
+  transform: translateY(0px);
+}
+
+.moreBtnText:hover::before {
+  transform: translateY(-85px);
+  opacity: .7;
+}
+
+.moreBtnText::after {
+  content: "MORE";
+  position: absolute;
+  color: #AA0601;
+  transition: all .65s .3s;
+  transform: translateY(0px);
+  left: 32px;
+}
+
+.moreBtnText:hover::after {
+  transform: translateY(-145px);
+  opacity: .4;
+}
+
+.moreArrow {
+  display: inline-block;
+  transition: all .3s;
+  transform: translateX(0px);
+}
+
+.moreArrow:hover {
+  transform: translateX(15px);
+}
+
+.crossover-down {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 144px;
+}
+
+.others {
+  display: flex;
+  justify-content: space-between;
+}
+
+.othersItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 585px;
+  height: 592px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.doubleA {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-8.png);
+}
+
+.youth {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-9.png);
+}
+
+.othersText {
+  font-size: 72px;
+  line-height: 108px;
+  font-weight: 700;
+  color: #AA0601;
+  z-index: 1;
+}
+
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width:992px) {
+  .glasses .container {
+    padding: 0 40px;
+  }
+
+  .crossover {
+    margin-bottom: 40px;
+  }
+
+  .crossover-down {
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle-white {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .othersItem {
+    width: 322px;
+    height: 280px;
+  }
+
+  .othersText {
+    font-size: 32px;
+    line-height: 25px;
+  }
+
+  .moreBtnText {
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+  .moreBtn-wrap::after {
+    right: -49px;
+  }
+
+  .moreBtnText:hover::before {
+  transform: translateY(-45px);
+}
+  .moreBtnText:hover::after {
+  transform: translateY(-85px);
+}
+
+  .moreArrow {
+      width: 27px;
+      height: 27px;
+    }
+}
+  
+@media (max-width:576px) {
+  .glasses .container {
+    padding: 0 24px;
+  }
+  
+  .glasses {
+    padding-bottom: 189px;
+  }
+
+  .crossover {
+    margin-bottom: 20px;
+  }
+
+  .crossover-down {
+    margin-bottom: 24px;
+  }
+
+  .others {
+    flex-wrap: wrap;
+  }
+
+  .othersItem {
+    width: 100%;
+  }
+
+  .doubleA {
+    margin-bottom: 20px;
+  }
+
+  .moreBtn-wrap {
+    margin-right: 49px;
+  }
+
+  .moreBtnText {
+    font-size: 26px;
+    line-height: 20px;
+  }
+
+  .moreBtnText:hover::before {
+  transform: translateY(-25px);
+}
+  .moreBtnText:hover::after {
+  transform: translateY(-48px);
+}
+
+  .moreArrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* customer */
+.customer {
+  margin-top: -380px;
+}
+
+.customer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 0 80px 0;
+}
+
+.sectionTitle-white {
+  margin-bottom: 60px;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.allCards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardItem {
+  width: 282px;
+}
+
+.cardContent {
+  border: 1px solid #DEE2E6;
+  padding: 16px;
+}
+
+.customerName {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #212529;
+  font-weight: 500;
+}
+
+.cardText {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212529;
+  font-weight: 400;
+}
+
+.updated {
+  font-size: 16px;
+  line-height: 21px;
+  color: #707070;
+  font-weight: 400;
+}
+
+@media (max-width:992px) {
+  .customer {
+    margin-top: -480px;
+  }
+  
+  .customer .container {
+    max-width: 672px;
+    padding: 40px 0 40px 0;
+  }
+  
+  .sectionTitle-white {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .allCards {
+    flex-wrap: wrap;
+  }
+
+  .cardContent {
+    background-color: #fff;
+  }
+  
+  .cardItem {
+    width: 324px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer .container {
+    max-width: 352px;
+    padding: 24px 0 24px 0;
+  }
+
+  .customer {
+    margin-top: -200px;
+  }
+  
+  .sectionTitle-white {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+  
+  .allCards {
+    justify-content: center;
+  }
+}
+
+
+/* contact */
+
+.contact {
+  background-color: #AA06010D;
+}
+
+.contact .container {
+  max-width: 792px;
+  margin: 0 auto;
+  padding: 64px 0 92px 0;
+}
+
+.sectionTitle-black {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  color: #000;
+}
+
+.contactText {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+textarea {
+  resize: none;
+  height: 136px;
+}
+
+::placeholder, input[type="submit"], lebal {
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  cursor: pointer;
+  padding-left: 4px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type=checkbox] + label::before {
+  content: "\2714";
+  border: 1px solid #000;
+  border-radius: 10%;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding-left: 1px;
+  margin-right: 8px;
+  color: transparent;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #AA0601;
+  border-color: #AA0601;
+  color: #fff;
+}
+
+.submit {
+  margin-top: 42px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  padding: 16px 58px;
+  cursor: pointer;
+  border: none;
+  background: #AA0601;
+  color: #FFF;
+}
+
+input[type="submit"]:hover {
+  background: #650300;
+}
+
+@media (max-width:992px) {
+  .contact .container {
+    max-width: 498px;
+  }
+
+  .contactText {
+      font-size: 16px;
+      line-height: 24px;
+  }
+
+  .sectionTitle {
+      font-size: 32px;
+      line-height: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact .container {
+    max-width: 327px;
+  }
+
+  .sectionTitle {
+      font-size: 20px;
+  }
+}
+
+/* footer */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer {
+  background-color: #AA0601;
+}
+
+.footer .container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 27.4px;
+}
+
+.footerNavWrap {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerNav {
+  display: flex;
+  align-items: center;
+}
+
+.footerNavItem {
+  padding-right: 48px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footerSocialIcon {
+    display: flex;
+  }
+
+.SNSIcon {
+  margin-left: 32px;
+}
+
+.footerInfo {
+  margin-bottom: 24px;
+}
+
+.infoText {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  line-height: 54px;
+  color: #fff;
+}
+
+.infoIcon {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+}
+
+.infoPhone {
+  text-align: center;
+}
+
+.footerBorder {
+  margin-bottom: 24px;
+  height: 1px;
+  border: 1px solid #fff;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.copyrightContent {
+    display: flex;
+}
+
+.copyrightLogo {
+  margin-right: 38px;
+}
+
+.article {
+  display: flex;
+  margin-left: 446px;
+}
+
+.articleItem {
+  margin-left: 62px;
+}
+
+@media (max-width: 992px) {
+  .footer .container {
+    max-width: 672px;
+    padding: 40px 0;
+  }
+  
+  .footerNavItem {
+    padding-right: 40px;
+  }
+  
+  .SNSIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footerNavWrap {
+    margin-bottom: 24px;
+  }
+  
+  .infoText {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .infoIcon {
+    margin-right: 8px;
+    width: 23px;
+    height: 23px;
+  }
+  
+  .copyrightLogo {
+    display: none;
+  }
+  
+  .article {
+    margin-left: 162px;
+  }
+  
+  .articleItem {
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .container {
+    max-width: 351px;
+    padding: 24px 0;
+  }
+  
+  .footerNav {
+    display: none;
+  }
+  
+  .footerHead {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  
+  .infoText {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  .infoIcon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .SNSIcon {
+    margin-left: 24px;
+  }
+  
+  .footerBorder {
+    margin-bottom: 16px;
+  }
+  
+  .copyright {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  
+  .copyrightLogo {
+    display: block;
+    margin-right: 0;
+    width: 46px;
+    height: 27.93px;
+  }
+  
+  .copyrightContent {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .copyrightContent p {
+    margin-bottom: 8px;
+  }
+  
+  .article {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .articleItem {
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+  
+}
